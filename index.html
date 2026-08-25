@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matriz Energética vs. Matriz Elétrica | Projeto Educacional EPE/ABCDEnergia</title>
+  <meta name="description" content="Site educativo e interativo sobre as diferenças entre Matriz Energética e Matriz Elétrica, comparando Brasil e Mundo com dados da EPE (ABCDEnergia), BEN e IEA.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚡%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <script defer src="js/data.js"></script>
+  <script defer src="js/charts.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Navegação principal">
+      <a href="#inicio" class="marca">
+        <svg class="marca-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg>
+        Energia<span class="marca-realce">em&nbsp;Foco</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle-linha"></span>
+        <span class="nav-toggle-linha"></span>
+        <span class="nav-toggle-linha"></span>
+        <span class="visually-hidden">Abrir menu</span>
+      </button>
+      <ul id="menu-principal" class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#conceitos">Conceitos</a></li>
+        <li><a href="#comparativo">Comparativo</a></li>
+        <li><a href="#fontes">Fontes de Energia</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <section id="inicio" class="hero">
+      <div class="hero-brilho b1" aria-hidden="true"></div>
+      <div class="hero-brilho b2" aria-hidden="true"></div>
+      <div class="hero-brilho b3" aria-hidden="true"></div>
+      <div class="container hero-conteudo">
+        <span class="hero-etiqueta reveal">Projeto educacional · Dados públicos da EPE / ABCDEnergia</span>
+        <h1 class="reveal">Matriz <span class="texto-verde">Energética</span> <em>vs.</em> Matriz <span class="texto-amarelo">Elétrica</span></h1>
+        <p class="hero-subtitulo reveal">Entenda a diferença entre a energia que move o mundo e a eletricidade que chega à sua casa.</p>
+
+        <div class="kpis">
+          <article class="kpi-card reveal">
+            <div class="kpi-topo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="kpi-icone kpi-icone-energetica"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm-5-8a5 5 0 0 1 10 0 5 5 0 0 1-10 0z"/></svg>
+              <span class="kpi-chip">Mundo: ~15%</span>
+            </div>
+            <p class="kpi-numero"><span class="contador" data-valor="49.5" data-casas="1">0</span>%</p>
+            <h2>da matriz <strong>energética</strong> brasileira é renovável</h2>
+            <p class="kpi-nota">Inclui transportes, indústrias, aquecimento e eletricidade.</p>
+          </article>
+
+          <article class="kpi-card reveal">
+            <div class="kpi-topo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="kpi-icone kpi-icone-eletrica"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg>
+              <span class="kpi-chip">Mundo: ~30%</span>
+            </div>
+            <p class="kpi-numero"><span class="contador" data-valor="80" data-casas="0">0</span>%<sup>+</sup></p>
+            <h2>da matriz <strong>elétrica</strong> brasileira é renovável</h2>
+            <p class="kpi-nota">Considera apenas as fontes que geram energia elétrica.</p>
+          </article>
+        </div>
+
+        <div class="hero-acoes reveal">
+          <a class="botao botao-primario" href="#comparativo">
+            Explorar os gráficos
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </a>
+          <a class="botao botao-contorno" href="#fontes">Conhecer as fontes de energia</a>
+        </div>
+      </div>
+      <div class="hero-onda" aria-hidden="true">
+        <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#f6fbf7" d="M0,64 C240,96 480,16 720,32 C960,48 1200,80 1440,40 L1440,90 L0,90 Z"></path></svg>
+      </div>
+    </section>
+
+    <section id="conceitos" class="secao">
+      <div class="container">
+        <header class="cabecalho-secao reveal">
+          <span class="etiqueta-secao">Seção 01 · Conceituação</span>
+          <h2>Duas matrizes, dois olhares sobre a energia</h2>
+          <p>Toda matriz elétrica está contida na matriz energética — mas nem toda a energia consumida vira eletricidade.</p>
+        </header>
+
+        <div class="grade-conceitos">
+          <article class="conceito-card conceito-energetica reveal">
+            <div class="conceito-icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm6.93 6h-2.95a15.7 15.7 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.93 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14A7.85 7.85 0 0 1 4 12c0-.69.1-1.36.26-2h3.38a16.6 16.6 0 0 0 0 4H4.26zm.81 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.99 7.99 0 0 1 5.07 16zm2.95-8H5.07a7.99 7.99 0 0 1 4.33-3.56A15.7 15.7 0 0 0 8.02 8zM12 19.96A13.98 13.98 0 0 1 10.09 16h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66a14.72 14.72 0 0 1 0-4h4.68a14.72 14.72 0 0 1 0 4zm.26 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a7.99 7.99 0 0 1-4.33 3.56zM16.36 14a16.6 16.6 0 0 0 0-4h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+            </div>
+            <span class="conceito-tag tag-energetica">O retrato completo</span>
+            <h3>Matriz Energética</h3>
+            <p>Representa <strong>todo o consumo de energia</strong> de um país ou do planeta: combustíveis dos transportes, calor das indústrias, aquecimento residencial <strong>e também</strong> a eletricidade.</p>
+            <ul class="conceito-lista">
+              <li>Combustíveis líquidos (gasolina, diesel, querosene)</li>
+              <li>Gás natural e carvão para indústria e calor</li>
+              <li>Biomassa, lenha e derivados da cana</li>
+              <li>Todas as fontes usadas para gerar eletricidade</li>
+            </ul>
+          </article>
+
+          <article class="conceito-card conceito-eletrica reveal">
+            <div class="conceito-icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg>
+            </div>
+            <span class="conceito-tag tag-eletrica">Um recorte especial</span>
+            <h3>Matriz Elétrica</h3>
+            <p>É um <strong>recorte da matriz energética</strong>: considera somente as fontes usadas para <strong>gerar energia elétrica</strong> — aquela que sai das tomadas.</p>
+            <ul class="conceito-lista">
+              <li>Hidrelétricas, termelétricas e usinas nucleares</li>
+              <li>Painéis solares e turbinas eólicas conectados à rede</li>
+              <li>Mostra a "origem" da luz que acende sua casa</li>
+              <li>É onde o Brasil brilha em renováveis</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="diagrama-linha">
+        <figure class="diagrama-wrap reveal">
+          <figcaption class="diagrama-titulo">Como os conceitos se encaixam</figcaption>
+          <svg class="diagrama" viewBox="0 0 720 430" role="img" aria-labelledby="diagrama-titulo-svg">
+            <title id="diagrama-titulo-svg">Diagrama mostrando a matriz elétrica como subconjunto da matriz energética</title>
+            <circle cx="340" cy="215" r="185" class="diag-circulo-maior"/>
+            <text x="340" y="62" text-anchor="middle" class="diag-texto-maior">MATRIZ ENERGÉTICA</text>
+            <text x="340" y="84" text-anchor="middle" class="diag-texto-menor">(toda a energia consumida)</text>
+            <g class="diag-chip">
+              <rect x="170" y="118" width="122" height="34" rx="17"/>
+              <text x="231" y="140" text-anchor="middle">🚗 Transportes</text>
+            </g>
+            <g class="diag-chip">
+              <rect x="163" y="272" width="116" height="34" rx="17"/>
+              <text x="221" y="294" text-anchor="middle">🏭 Indústria</text>
+            </g>
+            <g class="diag-chip">
+              <rect x="212" y="332" width="150" height="34" rx="17"/>
+              <text x="287" y="354" text-anchor="middle">🔥 Aquecimento</text>
+            </g>
+            <circle cx="430" cy="255" r="92" class="diag-circulo-interno"/>
+            <text x="430" y="250" text-anchor="middle" class="diag-texto-interno">MATRIZ ELÉTRICA</text>
+            <text x="430" y="270" text-anchor="middle" class="diag-texto-interno-sub">(eletricidade)</text>
+            <text x="430" y="292" text-anchor="middle" class="diag-texto-interno-emoji">💡🔌</text>
+          </svg>
+          <div class="diagrama-legenda">
+            <span><i class="ponto ponto-verde"></i>Outros usos de energia (transporte, indústria, calor)</span>
+            <span><i class="ponto ponto-amarelo"></i>Somente geração de eletricidade</span>
+          </div>
+        </figure>
+
+        <aside class="analogia reveal">
+          <span class="analogia-emoji" aria-hidden="true">💡</span>
+          <p><strong>Analogia rápida:</strong> pense na <strong>matriz energética</strong> como a dieta completa de um país — tudo o que ele "consome" para se mover, produzir e se aquecer. A <strong>matriz elétrica</strong> é apenas o prato que alimenta as tomadas.</p>
+        </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparativo" class="secao secao-alt">
+      <div class="container">
+        <header class="cabecalho-secao reveal">
+          <span class="etiqueta-secao">Seção 02 · Comparativo interativo</span>
+          <h2>Brasil × Mundo: quem aposta nas renováveis?</h2>
+          <p>Alterne entre os cenários e observe como cada matriz se distribui entre fontes renováveis e não renováveis.</p>
+        </header>
+
+        <div class="tabs-wrap reveal">
+          <div class="tabs" role="tablist" aria-label="Selecionar cenário">
+            <button class="tab ativa" role="tab" id="tab-brasil" data-escopo="brasil" aria-selected="true" aria-controls="painel-graficos">
+              🇧🇷 Brasil
+            </button>
+            <button class="tab" role="tab" id="tab-mundo" data-escopo="mundo" aria-selected="false" aria-controls="painel-graficos" tabindex="-1">
+              🌍 Mundo
+            </button>
+          </div>
+        </div>
+
+        <div id="painel-graficos" role="tabpanel" aria-labelledby="tab-brasil" class="grade-graficos">
+          <article class="painel-grafico reveal">
+            <header class="painel-cabecalho">
+              <div>
+                <h3>Matriz Energética</h3>
+                <p>Toda a energia consumida no cenário selecionado</p>
+              </div>
+              <span class="selo-renovavel selo-energetica" id="badge-energetica">—</span>
+            </header>
+            <div class="painel-corpo">
+              <div class="area-canvas"><canvas id="graficoEnergetica" aria-label="Gráfico de distribuição da matriz energética" role="img"></canvas></div>
+              <ul class="legenda-dados" id="legendaEnergetica" aria-label="Porcentagem de cada fonte na matriz energética"></ul>
+            </div>
+          </article>
+
+          <article class="painel-grafico reveal">
+            <header class="painel-cabecalho">
+              <div>
+                <h3>Matriz Elétrica</h3>
+                <p>Apenas as fontes de geração de eletricidade</p>
+              </div>
+              <span class="selo-renovavel selo-eletrica" id="badge-eletrica">—</span>
+            </header>
+            <div class="painel-corpo">
+              <div class="area-canvas"><canvas id="graficoEletrica" aria-label="Gráfico de distribuição da matriz elétrica" role="img"></canvas></div>
+              <ul class="legenda-dados" id="legendaEletrica" aria-label="Porcentagem de cada fonte na matriz elétrica"></ul>
+            </div>
+          </article>
+        </div>
+
+        <aside class="destaque-caixa reveal" id="destaque-caixa" aria-live="polite">
+          <span class="destaque-emoji" aria-hidden="true">⭐</span>
+          <div>
+            <h3 id="destaque-titulo">Destaque brasileiro</h3>
+            <p id="destaque-texto">Na matriz elétrica do Brasil, a força é clara: hidrelétrica liderando com folga, ventos potentes do Nordeste na eólica e uma explosão da solar — inclusive nos telhados, com a Geração Distribuída (GD).</p>
+          </div>
+        </aside>
+
+        <article class="painel-grafico painel-barras reveal">
+          <header class="painel-cabecalho">
+            <div>
+              <h3>Radar das Renováveis</h3>
+              <p>Participação de fontes renováveis em cada matriz (%)</p>
+            </div>
+          </header>
+          <div class="area-canvas area-canvas-barra"><canvas id="graficoComparativo" aria-label="Gráfico comparativo da participação renovável entre Brasil e Mundo" role="img"></canvas></div>
+        </article>
+
+        <p class="nota-dados reveal">Valores aproximados para fins didáticos, com base no Balanço Energético Nacional (BEN) e dados da IEA — ano-base 2023.</p>
+      </div>
+    </section>
+
+    <section id="fontes" class="secao">
+      <div class="container">
+        <header class="cabecalho-secao reveal">
+          <span class="etiqueta-secao">Seção 03 · Glossário visual</span>
+          <h2>Fontes de Energia: renováveis × não renováveis</h2>
+          <p>Clique em um card para descobrir curiosidades sobre cada fonte.</p>
+        </header>
+
+        <div class="filtros reveal" role="group" aria-label="Filtrar fontes por tipo">
+          <button class="filtro ativo" data-filtro="todas">Todas</button>
+          <button class="filtro" data-filtro="renovavel">🌱 Renováveis</button>
+          <button class="filtro" data-filtro="naorenovavel">⛽ Não Renováveis</button>
+        </div>
+
+        <div class="grade-fontes" id="grade-fontes"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-grade">
+      <div class="rodape-sobre">
+        <a href="#inicio" class="marca marca-rodape">
+          <svg class="marca-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg>
+          Energia<span class="marca-realce">em&nbsp;Foco</span>
+        </a>
+        <p>Site educativo e interativo criado para explicar, de forma visual e didática, as diferenças entre Matriz Energética e Matriz Elétrica, comparando Brasil e Mundo.</p>
+        <nav class="rodape-menu" aria-label="Links rápidos">
+          <a href="#inicio">Início</a>
+          <a href="#conceitos">Conceitos</a>
+          <a href="#comparativo">Comparativo</a>
+          <a href="#fontes">Fontes</a>
+        </nav>
+      </div>
+
+      <div class="rodape-fontes">
+        <h3>📚 Fontes &amp; Referências</h3>
+        <p class="rodape-fontes-texto">Os dados, conceitos e referências informativas utilizados neste site foram obtidos através do portal educacional <strong>ABCDEnergia</strong> da <strong>Empresa de Pesquisa Energética (EPE)</strong>.</p>
+        <ul class="lista-referencias">
+          <li>
+            <span class="ref-tipo ref-principal">Fonte Principal</span>
+            <a href="https://www.epe.gov.br/pt/abcdenergia/matriz-energetica-e-eletrica" target="_blank" rel="noopener noreferrer">EPE – Matriz Energética e Elétrica ↗</a>
+          </li>
+          <li>
+            <span class="ref-tipo ref-complementar">Conteúdo Complementar</span>
+            <a href="https://www.epe.gov.br/pt/abcdenergia" target="_blank" rel="noopener noreferrer">EPE – Portal ABCDEnergia ↗</a>
+          </li>
+          <li>
+            <span class="ref-tipo ref-dados">Dados Complementares</span>
+            <a href="https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/balanco-energetico-nacional-ben" target="_blank" rel="noopener noreferrer">Balanço Energético Nacional (BEN) ↗</a>
+          </li>
+          <li>
+            <span class="ref-tipo ref-dados">Dados Complementares</span>
+            <a href="https://www.iea.org/data-and-statistics" target="_blank" rel="noopener noreferrer">International Energy Agency (IEA) ↗</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rodape-base">
+      <div class="container rodape-base-conteudo">
+        <p>© <span id="ano-atual">2026</span> · Conteúdo baseado nos dados públicos da EPE sob licença <a href="https://creativecommons.org/licenses/by/4.0/deed.pt_BR" target="_blank" rel="noopener noreferrer">Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)</a>.</p>
+        <p class="rodape-aviso">Valores apresentados são aproximações didáticas para fins educacionais.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal-fonte" hidden>
+    <div class="modal-overlay" data-fechar-modal></div>
+    <div class="modal-dialogo" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <button class="modal-fechar" type="button" data-fechar-modal aria-label="Fechar janela">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+      <span class="modal-tag" id="modal-tag">Renovável</span>
+      <h3 id="modal-titulo">Título</h3>
+      <p id="modal-detalhe">Detalhe</p>
+      <div class="modal-curiosidade">
+        <strong>✨ Você sabia?</strong>
+        <p id="modal-curiosidade">Curiosidade</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
