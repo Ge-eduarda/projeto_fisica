@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matriz Energética vs. Matriz Elétrica | Projeto Educacional EPE/ABCDEnergia</title>
-  <meta name="description" content="Site educativo e interativo sobre as diferenças entre Matriz Energética e Matriz Elétrica, comparando Brasil e Mundo com dados da EPE (ABCDEnergia), BEN e IEA.">
+  <meta name="description" content="Site educativo sobre as diferenças entre Matriz Energética, Matriz Elétrica e Fontes Renováveis vs. Não Renováveis com dados da EPE/ABCDEnergia.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚡%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,7 @@
 <body>
   <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
 
+  <!-- NAVEGAÇÃO -->
   <header class="site-header">
     <nav class="container nav" aria-label="Navegação principal">
       <a href="#inicio" class="marca">
@@ -33,15 +34,17 @@
       </button>
       <ul id="menu-principal" class="menu">
         <li><a href="#inicio">Início</a></li>
-        <li><a href="#conceitos">Conceitos</a></li>
-        <li><a href="#comparativo">Comparativo</a></li>
-        <li><a href="#fontes">Fontes de Energia</a></li>
+        <li><a href="#conceitos">Matrizes</a></li>
+        <li><a href="#renovaveis-vs-naorenovaveis">Renováveis vs. Não Renováveis</a></li>
+        <li><a href="#comparativo">Brasil × Mundo</a></li>
+        <li><a href="#fontes">Glossário de Fontes</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="conteudo">
 
+    <!-- HERO SECTION -->
     <section id="inicio" class="hero">
       <div class="hero-brilho b1" aria-hidden="true"></div>
       <div class="hero-brilho b2" aria-hidden="true"></div>
@@ -49,7 +52,7 @@
       <div class="container hero-conteudo">
         <span class="hero-etiqueta reveal">Projeto educacional · Dados públicos da EPE / ABCDEnergia</span>
         <h1 class="reveal">Matriz <span class="texto-verde">Energética</span> <em>vs.</em> Matriz <span class="texto-amarelo">Elétrica</span></h1>
-        <p class="hero-subtitulo reveal">Entenda a diferença entre a energia que move o mundo e a eletricidade que chega à sua casa.</p>
+        <p class="hero-subtitulo reveal">Entenda como a energia é gerada, consumida e classificada entre fontes renováveis e não renováveis no Brasil e no mundo.</p>
 
         <div class="kpis">
           <article class="kpi-card reveal">
@@ -59,7 +62,7 @@
             </div>
             <p class="kpi-numero"><span class="contador" data-valor="49.5" data-casas="1">0</span>%</p>
             <h2>da matriz <strong>energética</strong> brasileira é renovável</h2>
-            <p class="kpi-nota">Inclui transportes, indústrias, aquecimento e eletricidade.</p>
+            <p class="kpi-nota">Inclui transporte, indústrias, aquecimento e eletricidade.</p>
           </article>
 
           <article class="kpi-card reveal">
@@ -69,16 +72,16 @@
             </div>
             <p class="kpi-numero"><span class="contador" data-valor="80" data-casas="0">0</span>%<sup>+</sup></p>
             <h2>da matriz <strong>elétrica</strong> brasileira é renovável</h2>
-            <p class="kpi-nota">Considera apenas as fontes que geram energia elétrica.</p>
+            <p class="kpi-nota">Considera apenas a geração de energia elétrica pública e distribuída.</p>
           </article>
         </div>
 
         <div class="hero-acoes reveal">
-          <a class="botao botao-primario" href="#comparativo">
-            Explorar os gráficos
+          <a class="botao botao-primario" href="#renovaveis-vs-naorenovaveis">
+            Entender os Tipos de Fonte
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
           </a>
-          <a class="botao botao-contorno" href="#fontes">Conhecer as fontes de energia</a>
+          <a class="botao botao-contorno" href="#comparativo">Ver Gráficos Comparativos</a>
         </div>
       </div>
       <div class="hero-onda" aria-hidden="true">
@@ -86,11 +89,12 @@
       </div>
     </section>
 
+    <!-- SEÇÃO 01: CONCEITOS DE MATRIZ -->
     <section id="conceitos" class="secao">
       <div class="container">
         <header class="cabecalho-secao reveal">
           <span class="etiqueta-secao">Seção 01 · Conceituação</span>
-          <h2>Duas matrizes, dois olhares sobre a energia</h2>
+          <h2>Matriz Energética vs. Matriz Elétrica</h2>
           <p>Toda matriz elétrica está contida na matriz energética — mas nem toda a energia consumida vira eletricidade.</p>
         </header>
 
@@ -101,12 +105,12 @@
             </div>
             <span class="conceito-tag tag-energetica">O retrato completo</span>
             <h3>Matriz Energética</h3>
-            <p>Representa <strong>todo o consumo de energia</strong> de um país ou do planeta: combustíveis dos transportes, calor das indústrias, aquecimento residencial <strong>e também</strong> a eletricidade.</p>
+            <p>Representa <strong>todo o consumo de energia</strong> de um país: combustíveis dos transportes, calor para caldeiras industriais, gás de cozinha <strong>e também</strong> a eletricidade.</p>
             <ul class="conceito-lista">
-              <li>Combustíveis líquidos (gasolina, diesel, querosene)</li>
-              <li>Gás natural e carvão para indústria e calor</li>
-              <li>Biomassa, lenha e derivados da cana</li>
-              <li>Todas as fontes usadas para gerar eletricidade</li>
+              <li>Combustíveis fósseis (gasolina, diesel, querosene de aviação)</li>
+              <li>Gás natural e carvão mineral para processos térmicos</li>
+              <li>Biomassa, etanol e derivados da cana-de-açúcar</li>
+              <li>Fontes renováveis e não renováveis somadas</li>
             </ul>
           </article>
 
@@ -114,62 +118,107 @@
             <div class="conceito-icone" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg>
             </div>
-            <span class="conceito-tag tag-eletrica">Um recorte especial</span>
+            <span class="conceito-tag tag-eletrica">Um recorte específico</span>
             <h3>Matriz Elétrica</h3>
-            <p>É um <strong>recorte da matriz energética</strong>: considera somente as fontes usadas para <strong>gerar energia elétrica</strong> — aquela que sai das tomadas.</p>
+            <p>É um <strong>subconjunto da matriz energética</strong>: reúne apenas os recursos primários e secundários transformados em <strong>energia elétrica</strong>.</p>
             <ul class="conceito-lista">
-              <li>Hidrelétricas, termelétricas e usinas nucleares</li>
-              <li>Painéis solares e turbinas eólicas conectados à rede</li>
-              <li>Mostra a "origem" da luz que acende sua casa</li>
-              <li>É onde o Brasil brilha em renováveis</li>
+              <li>Usina Hidrelétrica, Eólica e Solar Fotovoltaica</li>
+              <li>Usinas Termelétricas (Biomassa, Gás, Carvão ou Óleo)</li>
+              <li>Usinas Termonucleares</li>
+              <li>Geração Distribuída (painéis em telhados de residências)</li>
             </ul>
           </article>
-        </div>
-
-        <div class="diagrama-linha">
-        <figure class="diagrama-wrap reveal">
-          <figcaption class="diagrama-titulo">Como os conceitos se encaixam</figcaption>
-          <svg class="diagrama" viewBox="0 0 720 430" role="img" aria-labelledby="diagrama-titulo-svg">
-            <title id="diagrama-titulo-svg">Diagrama mostrando a matriz elétrica como subconjunto da matriz energética</title>
-            <circle cx="340" cy="215" r="185" class="diag-circulo-maior"/>
-            <text x="340" y="62" text-anchor="middle" class="diag-texto-maior">MATRIZ ENERGÉTICA</text>
-            <text x="340" y="84" text-anchor="middle" class="diag-texto-menor">(toda a energia consumida)</text>
-            <g class="diag-chip">
-              <rect x="170" y="118" width="122" height="34" rx="17"/>
-              <text x="231" y="140" text-anchor="middle">🚗 Transportes</text>
-            </g>
-            <g class="diag-chip">
-              <rect x="163" y="272" width="116" height="34" rx="17"/>
-              <text x="221" y="294" text-anchor="middle">🏭 Indústria</text>
-            </g>
-            <g class="diag-chip">
-              <rect x="212" y="332" width="150" height="34" rx="17"/>
-              <text x="287" y="354" text-anchor="middle">🔥 Aquecimento</text>
-            </g>
-            <circle cx="430" cy="255" r="92" class="diag-circulo-interno"/>
-            <text x="430" y="250" text-anchor="middle" class="diag-texto-interno">MATRIZ ELÉTRICA</text>
-            <text x="430" y="270" text-anchor="middle" class="diag-texto-interno-sub">(eletricidade)</text>
-            <text x="430" y="292" text-anchor="middle" class="diag-texto-interno-emoji">💡🔌</text>
-          </svg>
-          <div class="diagrama-legenda">
-            <span><i class="ponto ponto-verde"></i>Outros usos de energia (transporte, indústria, calor)</span>
-            <span><i class="ponto ponto-amarelo"></i>Somente geração de eletricidade</span>
-          </div>
-        </figure>
-
-        <aside class="analogia reveal">
-          <span class="analogia-emoji" aria-hidden="true">💡</span>
-          <p><strong>Analogia rápida:</strong> pense na <strong>matriz energética</strong> como a dieta completa de um país — tudo o que ele "consome" para se mover, produzir e se aquecer. A <strong>matriz elétrica</strong> é apenas o prato que alimenta as tomadas.</p>
-        </aside>
         </div>
       </div>
     </section>
 
+    <!-- SEÇÃO 02: RENOVÁVEIS VS NÃO RENOVÁVEIS (NOVA SEÇÃO) -->
+    <section id="renovaveis-vs-naorenovaveis" class="secao secao-destaque">
+      <div class="container">
+        <header class="cabecalho-secao reveal">
+          <span class="etiqueta-secao">Seção 02 · Classificação Fundamental</span>
+          <h2>Fontes Renováveis <em>vs.</em> Não Renováveis</h2>
+          <p>A principal diferença reside na velocidade de regeneração do recurso na natureza em relação ao ritmo do consumo humano.</p>
+        </header>
+
+        <div class="grade-comparativa-fontes">
+          <!-- CARD RENOVÁVEIS -->
+          <article class="card-tipo-fonte renovavel reveal">
+            <div class="card-tipo-cabecalho">
+              <span class="badge-tipo badge-verde">🌱 Renováveis</span>
+              <h3>Inesgotáveis ou Recomponíveis</h3>
+            </div>
+            <p class="card-tipo-descricao">
+              São recursos provenientes de fenômenos naturais contínuos ou ciclos biológicos capazes de se regenerar em curto espaço de tempo.
+            </p>
+            <div class="caracteristicas-bloco">
+              <h4>Vantagens e Desafios:</h4>
+              <ul class="lista-caracteristicas">
+                <li class="pos"><span class="simbolo">+</span> Baixa emissão de Gases de Efeito Estufa (GEE) durante a operação.</li>
+                <li class="pos"><span class="simbolo">+</span> Inexhaustibilidade (Sol, Vento, Água).</li>
+                <li class="neg"><span class="simbolo">-</span> Intermitência (a geração solar/eólica depende das condições climáticas).</li>
+                <li class="neg"><span class="simbolo">-</span> Necessidade de grande área territorial ou investimentos em transmissão.</li>
+              </ul>
+            </div>
+            <div class="exemplos-tags">
+              <strong>Principais Exemplos:</strong>
+              <div class="tags-container">
+                <span class="tag-item">Solar</span>
+                <span class="tag-item">Eólica</span>
+                <span class="tag-item">Hídrica</span>
+                <span class="tag-item">Biomassa</span>
+                <span class="tag-item">Geotérmica</span>
+                <span class="tag-item">Maremotriz</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD NÃO RENOVÁVEIS -->
+          <article class="card-tipo-fonte naorenovavel reveal">
+            <div class="card-tipo-cabecalho">
+              <span class="badge-tipo badge-cinza">⛽ Não Renováveis</span>
+              <h3>Esgotáveis e Limitadas</h3>
+            </div>
+            <p class="card-tipo-descricao">
+              Recursos cujas reservas são finitas na Terra. Formaram-se ao longo de milhões de anos por processos geológicos complexos.
+            </p>
+            <div class="caracteristicas-bloco">
+              <h4>Vantagens e Desafios:</h4>
+              <ul class="lista-caracteristicas">
+                <li class="pos"><span class="simbolo">+</span> Alta densidade energética e facilidade de armazenamento/transporte.</li>
+                <li class="pos"><span class="simbolo">+</span> Geração contínua e despachável (não depende de condições de vento/sol).</li>
+                <li class="neg"><span class="simbolo">-</span> Elevada emissão de CO₂ e poluentes atmosféricos na combustão.</li>
+                <li class="neg"><span class="simbolo">-</span> Riscos ambientais no extrativismo e esgotamento progressivo de jazidas.</li>
+              </ul>
+            </div>
+            <div class="exemplos-tags">
+              <strong>Principais Exemplos:</strong>
+              <div class="tags-container">
+                <span class="tag-item">Petróleo &amp; Derivados</span>
+                <span class="tag-item">Gás Natural</span>
+                <span class="tag-item">Carvão Mineral</span>
+                <span class="tag-item">Urânio (Nuclear)</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- RESUMO INFOGRÁFICO DE IMPACTO -->
+        <div class="caixa-infografica reveal">
+          <h3>⚡ Por que essa distinção importa?</h3>
+          <p>
+            A transição energética global visa substituir matrizes dominadas por fontes <strong>não renováveis</strong> por sistemas de matrizes <strong>renováveis</strong>, reduzindo as emissões globais de carbono e mitigando o aquecimento global. Nesse cenário, o Brasil possui posição privilegiada.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 03: COMPARATIVO BRASIL X MUNDO -->
     <section id="comparativo" class="secao secao-alt">
       <div class="container">
         <header class="cabecalho-secao reveal">
-          <span class="etiqueta-secao">Seção 02 · Comparativo interativo</span>
-          <h2>Brasil × Mundo: quem aposta nas renováveis?</h2>
+          <span class="etiqueta-secao">Seção 03 · Dados Comparativos</span>
+          <h2>Brasil × Mundo: A Força das Renováveis</h2>
           <p>Alterne entre os cenários e observe como cada matriz se distribui entre fontes renováveis e não renováveis.</p>
         </header>
 
@@ -218,43 +267,36 @@
           <span class="destaque-emoji" aria-hidden="true">⭐</span>
           <div>
             <h3 id="destaque-titulo">Destaque brasileiro</h3>
-            <p id="destaque-texto">Na matriz elétrica do Brasil, a força é clara: hidrelétrica liderando com folga, ventos potentes do Nordeste na eólica e uma explosão da solar — inclusive nos telhados, com a Geração Distribuída (GD).</p>
+            <p id="destaque-texto">Na matriz elétrica do Brasil, a liderança é das fontes renováveis: a hídrica lidera, seguida pelo forte crescimento da eólica e da solar fotovoltaica.</p>
           </div>
         </aside>
 
-        <article class="painel-grafico painel-barras reveal">
-          <header class="painel-cabecalho">
-            <div>
-              <h3>Radar das Renováveis</h3>
-              <p>Participação de fontes renováveis em cada matriz (%)</p>
-            </div>
-          </header>
-          <div class="area-canvas area-canvas-barra"><canvas id="graficoComparativo" aria-label="Gráfico comparativo da participação renovável entre Brasil e Mundo" role="img"></canvas></div>
-        </article>
-
-        <p class="nota-dados reveal">Valores aproximados para fins didáticos, com base no Balanço Energético Nacional (BEN) e dados da IEA — ano-base 2023.</p>
+        <p class="nota-dados reveal">Valores aproximados para fins didáticos, com base no Balanço Energético Nacional (BEN/EPE) e IEA.</p>
       </div>
     </section>
 
+    <!-- SEÇÃO 04: GLOSSÁRIO DE FONTES -->
     <section id="fontes" class="secao">
       <div class="container">
         <header class="cabecalho-secao reveal">
-          <span class="etiqueta-secao">Seção 03 · Glossário visual</span>
-          <h2>Fontes de Energia: renováveis × não renováveis</h2>
-          <p>Clique em um card para descobrir curiosidades sobre cada fonte.</p>
+          <span class="etiqueta-secao">Seção 04 · Catálogo Didático</span>
+          <h2>Glossário Visual das Fontes de Energia</h2>
+          <p>Filtre por tipo e clique no card para entender o funcionamento e curiosidades de cada fonte.</p>
         </header>
 
         <div class="filtros reveal" role="group" aria-label="Filtrar fontes por tipo">
-          <button class="filtro ativo" data-filtro="todas">Todas</button>
-          <button class="filtro" data-filtro="renovavel">🌱 Renováveis</button>
-          <button class="filtro" data-filtro="naorenovavel">⛽ Não Renováveis</button>
+          <button class="filtro ativo" data-filtro="todas">Todas as Fontes</button>
+          <button class="filtro" data-filtro="renovavel">🌱 Apenas Renováveis</button>
+          <button class="filtro" data-filtro="naorenovavel">⛽ Apenas Não Renováveis</button>
         </div>
 
         <div class="grade-fontes" id="grade-fontes"></div>
       </div>
     </section>
+
   </main>
 
+  <!-- RODAPÉ OBRIGATÓRIO (FONTES & REFERÊNCIAS) -->
   <footer class="rodape">
     <div class="container rodape-grade">
       <div class="rodape-sobre">
@@ -262,34 +304,46 @@
           <svg class="marca-icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2z"/></svg>
           Energia<span class="marca-realce">em&nbsp;Foco</span>
         </a>
-        <p>Site educativo e interativo criado para explicar, de forma visual e didática, as diferenças entre Matriz Energética e Matriz Elétrica, comparando Brasil e Mundo.</p>
+        <p>Projeto educativo criado para apresentar conceitos fundamentais de matrizes energéticas, elétricas e tipos de fontes de energia.</p>
         <nav class="rodape-menu" aria-label="Links rápidos">
           <a href="#inicio">Início</a>
-          <a href="#conceitos">Conceitos</a>
+          <a href="#conceitos">Matrizes</a>
+          <a href="#renovaveis-vs-naorenovaveis">Renováveis vs Não Renováveis</a>
           <a href="#comparativo">Comparativo</a>
           <a href="#fontes">Fontes</a>
         </nav>
       </div>
 
+      <!-- SEÇÃO DE FONTES EXIGIDA -->
       <div class="rodape-fontes">
-        <h3>📚 Fontes &amp; Referências</h3>
-        <p class="rodape-fontes-texto">Os dados, conceitos e referências informativas utilizados neste site foram obtidos através do portal educacional <strong>ABCDEnergia</strong> da <strong>Empresa de Pesquisa Energética (EPE)</strong>.</p>
+        <h3>📚 Fontes &amp; Referências Oficiais</h3>
+        <p class="rodape-fontes-texto">
+          Os dados, conceitos e conteúdos teóricos deste site foram extraídos das publicações e plataformas oficiais educacionais da <strong>Empresa de Pesquisa Energética (EPE)</strong> e seus relatórios associados.
+        </p>
         <ul class="lista-referencias">
           <li>
             <span class="ref-tipo ref-principal">Fonte Principal</span>
-            <a href="https://www.epe.gov.br/pt/abcdenergia/matriz-energetica-e-eletrica" target="_blank" rel="noopener noreferrer">EPE – Matriz Energética e Elétrica ↗</a>
+            <a href="https://www.epe.gov.br/pt/abcdenergia/matriz-energetica-e-eletrica" target="_blank" rel="noopener noreferrer">
+              EPE – Matriz Energética e Elétrica ↗
+            </a>
           </li>
           <li>
-            <span class="ref-tipo ref-complementar">Conteúdo Complementar</span>
-            <a href="https://www.epe.gov.br/pt/abcdenergia" target="_blank" rel="noopener noreferrer">EPE – Portal ABCDEnergia ↗</a>
+            <span class="ref-tipo ref-complementar">Portal Educacional</span>
+            <a href="https://www.epe.gov.br/pt/abcdenergia" target="_blank" rel="noopener noreferrer">
+              EPE – Portal ABCDEnergia ↗
+            </a>
           </li>
           <li>
-            <span class="ref-tipo ref-dados">Dados Complementares</span>
-            <a href="https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/balanco-energetico-nacional-ben" target="_blank" rel="noopener noreferrer">Balanço Energético Nacional (BEN) ↗</a>
+            <span class="ref-tipo ref-dados">Relatório Oficial</span>
+            <a href="https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/balanco-energetico-nacional-ben" target="_blank" rel="noopener noreferrer">
+              Balanço Energético Nacional (BEN/EPE) ↗
+            </a>
           </li>
           <li>
-            <span class="ref-tipo ref-dados">Dados Complementares</span>
-            <a href="https://www.iea.org/data-and-statistics" target="_blank" rel="noopener noreferrer">International Energy Agency (IEA) ↗</a>
+            <span class="ref-tipo ref-dados">Estatísticas Globais</span>
+            <a href="https://www.iea.org/data-and-statistics" target="_blank" rel="noopener noreferrer">
+              International Energy Agency (IEA) ↗
+            </a>
           </li>
         </ul>
       </div>
@@ -297,12 +351,13 @@
 
     <div class="rodape-base">
       <div class="container rodape-base-conteudo">
-        <p>© <span id="ano-atual">2026</span> · Conteúdo baseado nos dados públicos da EPE sob licença <a href="https://creativecommons.org/licenses/by/4.0/deed.pt_BR" target="_blank" rel="noopener noreferrer">Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)</a>.</p>
-        <p class="rodape-aviso">Valores apresentados são aproximações didáticas para fins educacionais.</p>
+        <p>© 2026 · Conteúdo estruturado com base nos dados públicos da EPE sob licença <a href="https://creativecommons.org/licenses/by/4.0/deed.pt_BR" target="_blank" rel="noopener noreferrer">Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)</a>.</p>
+        <p class="rodape-aviso">Desenvolvido com fins estritamente didáticos e educacionais.</p>
       </div>
     </div>
   </footer>
 
+  <!-- MODAL DE DETALHAMENTO DE FONTES -->
   <div class="modal" id="modal-fonte" hidden>
     <div class="modal-overlay" data-fechar-modal></div>
     <div class="modal-dialogo" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
@@ -319,4 +374,4 @@
     </div>
   </div>
 </body>
-</html>
+</html>	
